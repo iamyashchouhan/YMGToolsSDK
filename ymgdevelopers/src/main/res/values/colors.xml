@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_transparent">#6D000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="active_indicator">#FF6CFD</color>
+    <color name="inactive_indicator">#661E85</color>
+    <color name="colorPrimary">#CDDC39</color>
+    <color name="gray">#D1D1D1</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorStatusBar">#FFFFFF</color>
+</resources>
