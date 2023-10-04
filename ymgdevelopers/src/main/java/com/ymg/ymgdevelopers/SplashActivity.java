@@ -86,7 +86,7 @@ public abstract class SplashActivity extends AppCompatActivity {
                 try {
                     String status = response.getString("status");
                     String dev = response.getString("dev");
-                    Toast.makeText(SplashActivity.this, dev+"", Toast.LENGTH_SHORT).show();
+                
                     getNextStep(status,dev);
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
