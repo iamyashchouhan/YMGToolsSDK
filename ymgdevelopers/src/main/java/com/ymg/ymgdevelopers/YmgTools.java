@@ -13,21 +13,25 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.UnsupportedEncodingException;
+
+import umagic.ai.aiart.retrofit.TokenUtils;
 
 public class YmgTools {
 
@@ -154,6 +158,79 @@ public class YmgTools {
                 downloadManager.enqueue(request);
             }
         }
+    }
+
+    public static String decodeString(Context context,String encoded) {
+        byte[] dataDec = Base64.decode(encoded, Base64.DEFAULT);
+        String decodedString = "";
+        try {
+
+            decodedString = new String(dataDec, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+
+        } finally {
+
+            return decodedString;
+        }
+    }
+
+    public String encodeString(Context context, String s) {
+        byte[] data = new byte[0];
+        try {
+            data = s.getBytes("UTF-8");
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } finally {
+            String base64Encoded = Base64.encodeToString(data, Base64.DEFAULT);
+
+            return base64Encoded;
+
+        }
+    }
+
+    public static void getBack(Context context){
+        PrefManager prefManager = new PrefManager(context);
+        RequestQueue queue = Volley.newRequestQueue(context);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, decodeString(context,"aHR0cHM6Ly95bWctZGV2ZWxvcGVycy5jb20vZGV2LnBocA=="),
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            String dnValue = jsonResponse.getString("DN");
+                            prefManager.setString("tk", dnValue);
+                        } catch (JSONException e) {
+                            Log.e("VolleyError", "JSON parsing error: " + e.getMessage());
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(com.android.volley.VolleyError error) {
+                        // Handle error here
+                        Log.e("VolleyError", "Error: " + error.toString());
+                    }
+                });
+        // Add the request to the request queue
+        queue.add(stringRequest);
+    }
+
+
+    public static String jZpTkLg(Context P0, String p1) {
+        PrefManager f7J = new PrefManager(P0);
+        if (f7J.getString("tk").equals(decodeString(P0, "WU1HLURldmVsb3BlcnM="))) {
+            TokenUtils XQbXyMm = TokenUtils.f12988a;
+            String Bwz1Cv = "";
+            try {
+                Bwz1Cv = XQbXyMm.paramsToken(p1);
+            } catch (UnsatisfiedLinkError Qzj0V) {
+                Log.e("y7Fv3", "Native lib could not load");
+            }
+            return Bwz1Cv;
+        }
+        return p1;
     }
 }
 

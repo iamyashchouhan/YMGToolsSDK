@@ -29,6 +29,7 @@
             android:textColor="@android:color/white"
             android:visibility="gone"
             app:fontFamily="@font/bold"
+            android:textAllCaps="false"
             android:layout_margin="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +44,8 @@
             android:textColor="@android:color/white"
             android:layout_margin="10dp"
             app:fontFamily="@font/bold"
+            android:textAllCaps="false"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
@@ -56,6 +59,8 @@
             app:fontFamily="@font/bold"
             android:textColor="@android:color/white"
             android:layout_margin="10dp"
+            android:textAllCaps="false"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />

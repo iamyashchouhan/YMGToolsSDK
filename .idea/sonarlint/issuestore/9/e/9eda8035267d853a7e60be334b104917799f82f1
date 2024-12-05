@@ -1,0 +1,27 @@
+
+l
+java:S1192H"JDefine a constant instead of duplicating this literal "Share via" 3 times.(ˆÂíÿúÿÿÿÿ8ÁƒÏ¶¹2
+l
+java:S1192)"ODefine a constant instead of duplicating this literal "YMG-Developers" 9 times.(ÚÉÉà8ÁƒÏ¶¹2
+ƒ
+java:S1488»"eImmediately return this expression instead of assigning it to the temporary variable "base64Encoded".(Î¸ó 8ÁƒÏ¶¹2
+X
+java:S1143¯"5Remove this return statement from this finally block.(ÃàƒÓşÿÿÿÿ8ÂƒÏ¶¹2
+S
+java:S1143½"5Remove this return statement from this finally block.(êÄ¹Ÿ8ÂƒÏ¶¹2
+P
+java:S1874T"3Remove this use of "insertImage"; it is deprecated.(£º…Â8ÜƒÏ¶¹2
+U
+java:S1874b"3Remove this use of "NetworkInfo"; it is deprecated.(£Ëøüüÿÿÿÿ8İƒÏ¶¹2
+^
+java:S1874b"<Remove this use of "getActiveNetworkInfo"; it is deprecated.(£Ëøüüÿÿÿÿ8İƒÏ¶¹2
+U
+java:S1874c"3Remove this use of "isConnected"; it is deprecated.(ûæ¤ñÿÿÿÿÿ8İƒÏ¶¹2
+Q
+java:S1172¤".Remove this unused method parameter "context".(¯Üİ‚ıÿÿÿÿ8áƒÏ¶¹2
+\
+java:S4719©"9Replace charset name argument with StandardCharsets.UTF_8(Ğ­Ìáıÿÿÿÿ8äƒÏ¶¹2
+L
+java:S1172³".Remove this unused method parameter "context".(Ğ©¸½8äƒÏ¶¹2
+W
+java:S4719¶"9Replace charset name argument with StandardCharsets.UTF_8(öŒ³…8äƒÏ¶¹2

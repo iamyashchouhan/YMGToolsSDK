@@ -39,7 +39,6 @@ public class SplashActivity extends com.ymg.ymgdevelopers.SplashActivity {
 
     @Override
     public void onFinishButtonPressed() {
-        Toast.makeText(this, "YMG DEVELOPERS", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this,MainActivity.class));
     }
 }
